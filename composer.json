@@ -1,0 +1,55 @@
+{
+    "name": "budgetlens/intrapost",
+    "description": "Fluent PHP client for the Intrapost API (mail, parcels, track & trace)",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["intrapost", "shipping", "parcels", "track-trace", "postnl", "dhl", "gls", "laravel"],
+    "authors": [
+        {
+            "name": "123Lens",
+            "email": "dev@123lens.nl"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "orchestra/testbench": "^9.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Budgetlens\\Intrapost\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Budgetlens\\Intrapost\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:coverage": "pest --coverage",
+        "lint": "php-cs-fixer fix --dry-run --diff",
+        "fix": "php-cs-fixer fix"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Budgetlens\\Intrapost\\Laravel\\IntrapostServiceProvider"
+            ],
+            "aliases": {
+                "Intrapost": "Budgetlens\\Intrapost\\Laravel\\Facades\\Intrapost"
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

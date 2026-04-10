@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://api.intrapost.nl/documentation/track-trace/create-labels -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>track-trace/create-labels - Intrapost API</title>
+
+    <link rel="SHORTCUT ICON" href="https://api.intrapost.nl/Content/icons/favicon.ico">
+
+    <link href="./track-trace_create-labels - Intrapost API_files/css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+<a class="navbar-brand" href="https://api.intrapost.nl/documentation">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/mail-piece">mail-piece</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/order">order</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/track-trace">track-trace</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/utility">utility</a></li>
+                                            </ul>
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://api.intrapost.nl/documentation/track-trace/create-labels#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./track-trace_create-labels - Intrapost API_files/flag_en.gif">
+ EN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://api.intrapost.nl/nl?returnUrl=%2Fdocumentation%2Ftrack-trace%2Fcreate-labels"><img src="./track-trace_create-labels - Intrapost API_files/flag_nl.gif"> NL</a>
+                        <a class="dropdown-item" href="https://api.intrapost.nl/en?returnUrl=%2Fdocumentation%2Ftrack-trace%2Fcreate-labels"><img src="./track-trace_create-labels - Intrapost API_files/flag_en.gif"> EN</a>
+                    </div>
+                </div>
+
+<form action="https://api.intrapost.nl/logout" class="form-inline my-2 my-lg-0 ps-3" method="post"><input name="__RequestVerificationToken" type="hidden" value="b_sR0NICQc6GGn-jowWPrcNftt33u8SGm6P9Jlrlw8mwiVy42DdS6OVKbEvBCaeuWecnXL1W7A5xdlTUHm8E-OzdaCLzp0CoTKTpyGM9dYo1">                        <button class="btn btn-danger my-2 my-sm-0" type="submit">             Logout
+</button>
+</form>            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        <br>
+        
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://api.intrapost.nl/documentation">Home</a></li>
+    <li class="breadcrumb-item"><a href="https://api.intrapost.nl/documentation/track-trace">track-trace</a></li>
+    <li class="breadcrumb-item active">create-labels</li>
+</ol>
+
+<div class="page-header">
+    <h2>Function: track-trace/create-labels</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <p>
+            Link: <u>https://api.intrapost.nl/track-trace/create-labels</u>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Description</h3>
+        Retrieve shipping labels in one file
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Request:</h3>
+        <h4>* = required</h4>
+        <p>
+            <strong>Supported content types: </strong><br>
+                <strong>application/json:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/create-labels/request/application-json">example</a><br>
+                <strong>application/xml:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/create-labels/request/application-xml">example</a><br>
+        </p>
+        <p>
+                </p><ul>
+            <li>
+                <strong>ApiKey*: </strong>API key that you can find on the documentation page  
+
+                                            </li>
+            <li>
+                <strong>ShipmentIDs*: </strong>list of IDs of shipments  
+
+                                            </li>
+            <li>
+                <strong>LabelFormatType*: </strong>Label type and format to be returned  
+
+                                                    <br>
+    <strong>Supported values:</strong>
+    <ul>
+            <li>
+                <strong>[2] Zpl_Zebra_150x100: </strong>ZPL format for the Zebra printer with 150x100 mm labels
+            </li>
+            <li>
+                <strong>[3] Pdf_150x100: </strong>PDF format for a printer with 150x100 mm labels
+            </li>
+    </ul>
+            </li>
+    </ul>
+
+        <p></p>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Response:</h3>
+            <p>
+                <strong>Supported accept types: </strong><br>
+                    <strong>application/pdf:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/create-labels/response/application-pdf">example</a><br>
+                    <strong>text/zpl:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/create-labels/response/text-zpl">example</a><br>
+                    <strong>application/json:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/create-labels/response/application-json">example</a><br>
+                    <strong>application/xml:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/create-labels/response/application-xml">example</a><br>
+            </p>
+            <p>
+                    </p><ul>
+            <li>
+                <strong>Errors: </strong>list of error messages when an error has occured, otherwise null  
+
+                                            </li>
+            <li>
+                <strong>PdfLabelData: </strong>label PDF file in base64 encoding  
+
+                                            </li>
+            <li>
+                <strong>ZplLabelText: </strong>label ZPL code for the Zebra printer  
+
+                                            </li>
+    </ul>
+
+            <p></p>
+        </div>
+    </div>
+
+
+
+        <hr>
+        <footer>
+            <p>© 2026 - Intrapost B.V.</p><div class="pull-right">v17.610.604.11</div><p></p>
+        </footer>
+    </div>
+
+    <script src="./track-trace_create-labels - Intrapost API_files/jquery"></script>
+
+    <script src="./track-trace_create-labels - Intrapost API_files/bootstrap"></script>
+
+
+    
+
+
+
+
+
+<div id="give-freely-root-bcjindcccaagfpapjjmafapmmgkkhgoa" class="give-freely-root" data-extension-id="bcjindcccaagfpapjjmafapmmgkkhgoa" data-extension-name="JSON Formatter" style="display: block;"><template shadowrootmode="open"><style>
+  :host {
+    all: initial;
+  }
+
+  .gf-scroll-remove::-webkit-scrollbar {
+    border-radius-bottom-right: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .give-freely-close-button:hover {
+    opacity: 0.7;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1em 0;
+  }
+
+  dialog::backdrop  {
+    background-color: revert;
+  }
+
+  dialog.backdrop-hidden::backdrop  {
+    background-color: transparent;
+  }
+</style><div><div class="gf-app"></div></div></template></div></body></html>

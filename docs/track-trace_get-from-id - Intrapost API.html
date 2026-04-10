@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://api.intrapost.nl/documentation/track-trace/get-from-id -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>track-trace/get-from-id - Intrapost API</title>
+
+    <link rel="SHORTCUT ICON" href="https://api.intrapost.nl/Content/icons/favicon.ico">
+
+    <link href="./track-trace_get-from-id - Intrapost API_files/css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+<a class="navbar-brand" href="https://api.intrapost.nl/documentation">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/mail-piece">mail-piece</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/order">order</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/track-trace">track-trace</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/utility">utility</a></li>
+                                            </ul>
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://api.intrapost.nl/documentation/track-trace/get-from-id#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./track-trace_get-from-id - Intrapost API_files/flag_en.gif">
+ EN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://api.intrapost.nl/nl?returnUrl=%2Fdocumentation%2Ftrack-trace%2Fget-from-id"><img src="./track-trace_get-from-id - Intrapost API_files/flag_nl.gif"> NL</a>
+                        <a class="dropdown-item" href="https://api.intrapost.nl/en?returnUrl=%2Fdocumentation%2Ftrack-trace%2Fget-from-id"><img src="./track-trace_get-from-id - Intrapost API_files/flag_en.gif"> EN</a>
+                    </div>
+                </div>
+
+<form action="https://api.intrapost.nl/logout" class="form-inline my-2 my-lg-0 ps-3" method="post"><input name="__RequestVerificationToken" type="hidden" value="xXblLDkblGa_P_rXYtu2--cTsp1jHiYnWk9yW0ckeLcjIUT_7tknuhv6Xqbsjsidr1X3bZK1qSFpLT-KyE2P2_ftOCa8vpPFkaGD1oIBxf41">                        <button class="btn btn-danger my-2 my-sm-0" type="submit">             Logout
+</button>
+</form>            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        <br>
+        
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://api.intrapost.nl/documentation">Home</a></li>
+    <li class="breadcrumb-item"><a href="https://api.intrapost.nl/documentation/track-trace">track-trace</a></li>
+    <li class="breadcrumb-item active">get-from-id</li>
+</ol>
+
+<div class="page-header">
+    <h2>Function: track-trace/get-from-id</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <p>
+            Link: <u>https://api.intrapost.nl/track-trace/get-from-id</u>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Description</h3>
+        Get parcels by their ID. Maximum of 50 pieces per request
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Request:</h3>
+        <h4>* = required</h4>
+        <p>
+            <strong>Supported content types: </strong><br>
+                <strong>application/json:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/get-from-id/request/application-json">example</a><br>
+                <strong>application/xml:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/get-from-id/request/application-xml">example</a><br>
+        </p>
+        <p>
+                </p><ul>
+            <li>
+                <strong>ApiKey*: </strong>API key that you can find on the documentation page  
+
+                                            </li>
+            <li>
+                <strong>PieceIDs*: </strong>list of parcel IDs  
+
+                                            </li>
+            <li>
+                <strong>IncludeHistory: </strong>defines whether the status history will be needed or not  
+
+                                            </li>
+    </ul>
+
+        <p></p>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Response:</h3>
+            <p>
+                <strong>Supported accept types: </strong><br>
+                    <strong>application/json:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/get-from-id/response/application-json">example</a><br>
+                    <strong>application/xml:</strong> <a href="https://api.intrapost.nl/documentation/track-trace/get-from-id/response/application-xml">example</a><br>
+            </p>
+            <p>
+                    </p><ul>
+            <li>
+                <strong>Errors: </strong>list of error messages when an error has occured, otherwise null  
+
+                                            </li>
+            <li>
+                <strong>Shipments: </strong>the list of found shipments  
+
+                    <ul>
+            <li>
+                <strong>ID: </strong>the shipment's unique ID  
+
+                                            </li>
+            <li>
+                <strong>VZCode: </strong>the 'vind mijn zending' code  
+
+                                            </li>
+            <li>
+                <strong>ParcelType: </strong>product type  
+
+                                                    <br>
+    <strong>Supported values:</strong>
+    <ul>
+            <li>
+                <strong>[1] StandardParcel: </strong>a standard parcel
+            </li>
+            <li>
+                <strong>[2] InsuredParcel: </strong>an insured parcel
+            </li>
+            <li>
+                <strong>[3] RegisteredParcel: </strong>a registered parcel
+            </li>
+            <li>
+                <strong>[4] InsuredLetter: </strong>an insured letter
+            </li>
+            <li>
+                <strong>[5] RegisteredLetter: </strong>a registered letter
+            </li>
+            <li>
+                <strong>[6] StandardParcelStatedAddress: </strong>a standard parcel delivered only on stated address
+            </li>
+            <li>
+                <strong>[7] StandardParcelStatedAddressSignature: </strong>a standard parcel delivered only on stated address with signature
+            </li>
+            <li>
+                <strong>[8] MailboxParcel: </strong>mailbox parcel
+            </li>
+            <li>
+                <strong>[9] ParcelViaPickupLocation: </strong>a standard parcel delivered on pickup location
+            </li>
+            <li>
+                <strong>[10] StandardParcelWithEveningDelivery: </strong>a standard parcel with evening delivery
+            </li>
+            <li>
+                <strong>[11] StandardParcelWithAgeCheck: </strong>a standard parcel with age check
+            </li>
+            <li>
+                <strong>[12] StandardParcelSignature: </strong>a standard parcel delivered with signature for receipt
+            </li>
+    </ul>
+            </li>
+            <li>
+                <strong>Address: </strong>address  
+
+    <ul>
+            <li>
+                <strong>Street: </strong>street (has to be at most 150 characters long) 
+
+                                            </li>
+            <li>
+                <strong>Number: </strong>house/P.O. box number  (has to be in range between 1 and 999999)
+
+                                            </li>
+            <li>
+                <strong>Addition: </strong>housenumber addition (has to be at most 15 characters long) 
+
+                                            </li>
+            <li>
+                <strong>Zipcode: </strong>zipcode (has to be at most 15 characters long) 
+
+                                            </li>
+            <li>
+                <strong>City: </strong>city (has to be at most 100 characters long) 
+
+                                            </li>
+            <li>
+                <strong>CountryCode: </strong>2-letter ISO countrycode (has to be 2 characters long) 
+
+                                            </li>
+            <li>
+                <strong>Company: </strong>company name (has to be at most 150 characters long) 
+
+                                            </li>
+            <li>
+                <strong>FullName: </strong>full name (has to be at most 150 characters long) 
+
+                                            </li>
+            <li>
+                <strong>Email: </strong>email address (has to be at most 150 characters long) 
+
+                                            </li>
+            <li>
+                <strong>Phone: </strong>phonenumber (has to be at most 20 characters long) 
+
+                                            </li>
+            <li>
+                <strong>CountryNameNL: </strong>country name in Dutch  
+
+                                            </li>
+            <li>
+                <strong>CountryNameEN: </strong>country name in English  
+
+                                            </li>
+    </ul>
+                                            </li>
+            <li>
+                <strong>AccountNumber: </strong>account number that the item is declared under  
+
+                                            </li>
+            <li>
+                <strong>TrackTraceLink: </strong>track &amp; trace link  
+
+                                            </li>
+            <li>
+                <strong>ExternalLink: </strong>external link  
+
+                                            </li>
+            <li>
+                <strong>Barcode: </strong>external barcode  
+
+                                            </li>
+            <li>
+                <strong>Reference: </strong>reference  
+
+                                            </li>
+            <li>
+                <strong>WeightInGrams: </strong>weight in grams  
+
+                                            </li>
+            <li>
+                <strong>WeightInKilograms: </strong>weight in KG  
+
+                                            </li>
+            <li>
+                <strong>Status: </strong>the current status  
+
+                                                    <br>
+    <strong>Supported values:</strong>
+    <ul>
+            <li>
+                <strong>[0] Created: </strong>created/pre-registered
+            </li>
+            <li>
+                <strong>[1] Received: </strong>received for delivery
+            </li>
+            <li>
+                <strong>[2] Sorted: </strong>sorted for delivery
+            </li>
+            <li>
+                <strong>[3] Transported: </strong>on its way for delivery
+            </li>
+            <li>
+                <strong>[4] Delivered: </strong>delivered
+            </li>
+            <li>
+                <strong>[5] Returning: </strong>is being returned
+            </li>
+            <li>
+                <strong>[6] Returned: </strong>is returned
+            </li>
+            <li>
+                <strong>[7] Rerouted: </strong>delivery address is modified
+            </li>
+            <li>
+                <strong>[8] Pickup: </strong>can be collected at pickup point
+            </li>
+            <li>
+                <strong>[9] DeliveryDateTimeChanged: </strong>delivery date/time is modified
+            </li>
+            <li>
+                <strong>[10] PickupCollected: </strong>is collected at pickup point
+            </li>
+            <li>
+                <strong>[11] Processed: </strong>processed by Intrapost
+            </li>
+            <li>
+                <strong>[13] DeliveryFailed: </strong>delivery failed
+            </li>
+    </ul>
+            </li>
+            <li>
+                <strong>StatusTimestamp: </strong>the current status  
+
+                                            </li>
+            <li>
+                <strong>StatusDescriptionNL: </strong>status description (in Dutch)  
+
+                                            </li>
+            <li>
+                <strong>StatusDescriptionEN: </strong>status description (in English)  
+
+                                            </li>
+            <li>
+                <strong>DeliveryFrom: </strong>start of delivery time window  
+
+                                            </li>
+            <li>
+                <strong>DeliveryTill: </strong>end of delivery time window  
+
+                                            </li>
+            <li>
+                <strong>PickupAddressLines: </strong>pickup address  
+
+                                            </li>
+            <li>
+                <strong>StatusHistory: </strong>the list of status history  
+
+                    <ul>
+            <li>
+                <strong>Status: </strong>the status classification  
+
+                                                    <br>
+    <strong>Supported values:</strong>
+    <ul>
+            <li>
+                <strong>[0] Created: </strong>created/pre-registered
+            </li>
+            <li>
+                <strong>[1] Received: </strong>received for delivery
+            </li>
+            <li>
+                <strong>[2] Sorted: </strong>sorted for delivery
+            </li>
+            <li>
+                <strong>[3] Transported: </strong>on its way for delivery
+            </li>
+            <li>
+                <strong>[4] Delivered: </strong>delivered
+            </li>
+            <li>
+                <strong>[5] Returning: </strong>is being returned
+            </li>
+            <li>
+                <strong>[6] Returned: </strong>is returned
+            </li>
+            <li>
+                <strong>[7] Rerouted: </strong>delivery address is modified
+            </li>
+            <li>
+                <strong>[8] Pickup: </strong>can be collected at pickup point
+            </li>
+            <li>
+                <strong>[9] DeliveryDateTimeChanged: </strong>delivery date/time is modified
+            </li>
+            <li>
+                <strong>[10] PickupCollected: </strong>is collected at pickup point
+            </li>
+            <li>
+                <strong>[11] Processed: </strong>processed by Intrapost
+            </li>
+            <li>
+                <strong>[13] DeliveryFailed: </strong>delivery failed
+            </li>
+    </ul>
+            </li>
+            <li>
+                <strong>StatusTimestamp: </strong>the date and time for this status  
+
+                                            </li>
+            <li>
+                <strong>StatusDescriptionNL: </strong>status description (in Dutch)  
+
+                                            </li>
+            <li>
+                <strong>StatusDescriptionEN: </strong>status description (in English)  
+
+                                            </li>
+    </ul>
+                            </li>
+            <li>
+                <strong>Specials: </strong>the list of status history  
+
+                    <ul>
+            <li>
+                <strong>OptionType: </strong>the type of the special  
+
+                                                    <br>
+    <strong>Supported values:</strong>
+    <ul>
+            <li>
+                <strong>[1] WasLetter: </strong>Was letter
+            </li>
+            <li>
+                <strong>[2] DeviatedProcessing: </strong>Deviated Processing
+            </li>
+            <li>
+                <strong>[3] DimensionSurcharge: </strong>Dimension Surcharge
+            </li>
+            <li>
+                <strong>[4] IslandSurcharge: </strong>Island Surcharge
+            </li>
+            <li>
+                <strong>[9] IsLarge: </strong>Is Large
+            </li>
+            <li>
+                <strong>[11] WasMailBoxParcel: </strong>Was mailbox parcel
+            </li>
+            <li>
+                <strong>[12] SpecialSize: </strong>Special Size
+            </li>
+            <li>
+                <strong>[13] Fragile: </strong>Fragile
+            </li>
+    </ul>
+            </li>
+            <li>
+                <strong>OptionDescription: </strong>description of the special  
+
+                                            </li>
+    </ul>
+                            </li>
+            <li>
+                <strong>Measurements: </strong>the list of status history  
+
+                    <ul>
+            <li>
+                <strong>OptionType: </strong>the type of measurement  
+
+                                                    <br>
+    <strong>Supported values:</strong>
+    <ul>
+            <li>
+                <strong>[0] IntrapostLength: </strong>Intrapost measurement of Length
+            </li>
+            <li>
+                <strong>[1] IntrapostWidth: </strong>Intrapost measurement of Width
+            </li>
+            <li>
+                <strong>[2] IntrapostHeight: </strong>Intrapost measurement of Height
+            </li>
+            <li>
+                <strong>[3] CarrierLength: </strong>Carrier measurement of Length
+            </li>
+            <li>
+                <strong>[4] CarrierWidth: </strong>Carrier measurement of Width
+            </li>
+            <li>
+                <strong>[5] CarrierHeight: </strong>Carrier measurement of Height
+            </li>
+    </ul>
+            </li>
+            <li>
+                <strong>OptionDescription: </strong>the type of measurement  
+
+                                            </li>
+            <li>
+                <strong>OptionValue: </strong>measurement in centimeters  
+
+                                            </li>
+    </ul>
+                            </li>
+    </ul>
+                            </li>
+    </ul>
+
+            <p></p>
+        </div>
+    </div>
+
+
+
+        <hr>
+        <footer>
+            <p>© 2026 - Intrapost B.V.</p><div class="pull-right">v17.610.604.11</div><p></p>
+        </footer>
+    </div>
+
+    <script src="./track-trace_get-from-id - Intrapost API_files/jquery"></script>
+
+    <script src="./track-trace_get-from-id - Intrapost API_files/bootstrap"></script>
+
+
+    
+
+
+
+
+
+<div id="give-freely-root-bcjindcccaagfpapjjmafapmmgkkhgoa" class="give-freely-root" data-extension-id="bcjindcccaagfpapjjmafapmmgkkhgoa" data-extension-name="JSON Formatter" style="display: block;"><template shadowrootmode="open"><style>
+  :host {
+    all: initial;
+  }
+
+  .gf-scroll-remove::-webkit-scrollbar {
+    border-radius-bottom-right: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .give-freely-close-button:hover {
+    opacity: 0.7;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1em 0;
+  }
+
+  dialog::backdrop  {
+    background-color: revert;
+  }
+
+  dialog.backdrop-hidden::backdrop  {
+    background-color: transparent;
+  }
+</style><div><div class="gf-app"></div></div></template></div></body></html>

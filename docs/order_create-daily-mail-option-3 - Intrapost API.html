@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://api.intrapost.nl/documentation/order/create-daily-mail-option-3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>order/create-daily-mail-option-3 - Intrapost API</title>
+
+    <link rel="SHORTCUT ICON" href="https://api.intrapost.nl/Content/icons/favicon.ico">
+
+    <link href="./order_create-daily-mail-option-3 - Intrapost API_files/css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+<a class="navbar-brand" href="https://api.intrapost.nl/documentation">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/mail-piece">mail-piece</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/order">order</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/track-trace">track-trace</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.intrapost.nl/documentation/utility">utility</a></li>
+                                            </ul>
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://api.intrapost.nl/documentation/order/create-daily-mail-option-3#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./order_create-daily-mail-option-3 - Intrapost API_files/flag_en.gif">
+ EN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://api.intrapost.nl/nl?returnUrl=%2Fdocumentation%2Forder%2Fcreate-daily-mail-option-3"><img src="./order_create-daily-mail-option-3 - Intrapost API_files/flag_nl.gif"> NL</a>
+                        <a class="dropdown-item" href="https://api.intrapost.nl/en?returnUrl=%2Fdocumentation%2Forder%2Fcreate-daily-mail-option-3"><img src="./order_create-daily-mail-option-3 - Intrapost API_files/flag_en.gif"> EN</a>
+                    </div>
+                </div>
+
+<form action="https://api.intrapost.nl/logout" class="form-inline my-2 my-lg-0 ps-3" method="post"><input name="__RequestVerificationToken" type="hidden" value="U4Yi_o4DLvnyzFVeh3gU8xg70MEQO9iCjR0Z1XcsaTlHwHF18TWeT8KP8n8nDmTKqYvZgNY5jtfmFWFDZ9wZYBfAHqnL2d2Nr0vcgpAvSy41">                        <button class="btn btn-danger my-2 my-sm-0" type="submit">             Logout
+</button>
+</form>            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        <br>
+        
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://api.intrapost.nl/documentation">Home</a></li>
+    <li class="breadcrumb-item"><a href="https://api.intrapost.nl/documentation/order">order</a></li>
+    <li class="breadcrumb-item active">create-daily-mail-option-3</li>
+</ol>
+
+<div class="page-header">
+    <h2>Function: order/create-daily-mail-option-3</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <p>
+            Link: <u>https://api.intrapost.nl/order/create-daily-mail-option-3</u>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Description</h3>
+        create a daily mail order with option 3 (detailed amounts)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Request:</h3>
+        <h4>* = required</h4>
+        <p>
+            <strong>Supported content types: </strong><br>
+                <strong>application/json:</strong> <a href="https://api.intrapost.nl/documentation/order/create-daily-mail-option-3/request/application-json">example</a><br>
+                <strong>application/xml:</strong> <a href="https://api.intrapost.nl/documentation/order/create-daily-mail-option-3/request/application-xml">example</a><br>
+        </p>
+        <p>
+                </p><ul>
+            <li>
+                <strong>ApiKey*: </strong>API key that you can find on the documentation page  
+
+                                            </li>
+            <li>
+                <strong>AccountNumber*: </strong>customer accountnumber to be used  
+
+                                            </li>
+            <li>
+                <strong>DeliveryTime*: </strong>the delivery time of the pieces to Dutch addresses  
+
+                                                    <br>
+    <strong>Supported values:</strong>
+    <ul>
+            <li>
+                <strong>[0] Standard: </strong>standard
+            </li>
+            <li>
+                <strong>[3] FixedDays: </strong>fixed days
+            </li>
+    </ul>
+            </li>
+            <li>
+                <strong>CrateInfo: </strong>Information about the postcrates  
+
+    <ul>
+            <li>
+                <strong>Amount: </strong>amount of cates  
+
+                                            </li>
+            <li>
+                <strong>Description: </strong>description and/or unique characteristics of the crates  
+
+                                            </li>
+    </ul>
+                                            </li>
+            <li>
+                <strong>Reference: </strong>reference, personal input (has to be at most 2048 characters long) 
+
+                                            </li>
+            <li>
+                <strong>AmountLetterNetherlands20Gram: </strong>the amount of pieces to Dutch addresses (1 - 20 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterNetherlands50Gram: </strong>the amount of pieces to Dutch addresses (21 - 50 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterNetherlands100Gram: </strong>the amount of pieces to Dutch addresses (51 - 100 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterNetherlands350Gram: </strong>the amount of pieces to Dutch addresses (101 - 350 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterNetherlands2000Gram: </strong>the amount of pieces to Dutch addresses (351 - 2000 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterEurope20Gram: </strong>the amount of pieces to european addresses (1 - 20 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterEurope50Gram: </strong>the amount of pieces to european addresses (21 - 50 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterEurope100Gram: </strong>the amount of pieces to european addresses (51 - 100 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterEurope350Gram: </strong>the amount of pieces to european addresses (101 - 350 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterEurope2000Gram: </strong>the amount of pieces to european addresses (351 - 2000 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterRestOfWorld20Gram: </strong>the amount of pieces to rest of the world addresses (1 - 20 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterRestOfWorld50Gram: </strong>the amount of pieces to rest of the world addresses (21 - 50 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterRestOfWorld100Gram: </strong>the amount of pieces to rest of the world addresses (51 - 100 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterRestOfWorld350Gram: </strong>the amount of pieces to rest of the world addresses (101 - 350 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountLetterRestOfWorld2000Gram: </strong>the amount of pieces to rest of the world addresses (351 - 2000 grams)  
+
+                                            </li>
+            <li>
+                <strong>AmountRegisteredLetterNetherlands: </strong>the amount of registered letters to Dutch addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountRegisteredLetterEurope: </strong>the amount of registered letters to european addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountRegisteredLetterRestOfWorld: </strong>the amount of registered letters to rest of the world addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountInsuredLetterNetherlands: </strong>the amount of insured letters to Dutch addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountInsuredLetterEurope: </strong>the amount of insured letters to european addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountInsuredLetterRestOfWorld: </strong>the amount of insured letters to rest of the world addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelNetherlands2Kilogram: </strong>the amount of parcels to Dutch addresses (1 - 2 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelNetherlands5Kilogram: </strong>the amount of parcels to Dutch addresses (3 - 5 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelNetherlands10Kilogram: </strong>the amount of parcels to Dutch addresses (6 - 10 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelNetherlands20Kilogram: </strong>the amount of parcels to Dutch addresses (11 - 20 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelNetherlands30Kilogram: </strong>the amount of parcels to Dutch addresses (21 - 30 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelEurope2Kilogram: </strong>the amount of parcels to european addresses (1 - 2 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelEurope5Kilogram: </strong>the amount of parcels to european addresses (3 - 5 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelEurope10Kilogram: </strong>the amount of parcels to european addresses (6 - 10 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelEurope20Kilogram: </strong>the amount of parcels to european addresses (11 - 20 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelEurope30Kilogram: </strong>the amount of parcels to european addresses (21 - 30 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelRestOfWorld2Kilogram: </strong>the amount of parcels to rest of the world addresses (1 - 2 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelRestOfWorld5Kilogram: </strong>the amount of parcels to rest of the world addresses (3 - 5 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelRestOfWorld10Kilogram: </strong>the amount of parcels to rest of the world addresses (6 - 10 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelRestOfWorld20Kilogram: </strong>the amount of parcels to rest of the world addresses (11 - 20 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountParcelRestOfWorld30Kilogram: </strong>the amount of parcels to rest of the world addresses (21 - 30 kilograms)  
+
+                                            </li>
+            <li>
+                <strong>AmountRegisteredParcelNetherlands: </strong>the amount of registered parcels to Dutch addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountRegisteredParcelEurope: </strong>the amount of registered parcels to european addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountRegisteredParcelRestOfWorld: </strong>the amount of registered parcels to rest of the world addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountInsuredParcelNetherlands: </strong>the amount of insured parcels to Dutch addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountInsuredParcelEurope: </strong>the amount of insured parcels to european addressen  
+
+                                            </li>
+            <li>
+                <strong>AmountInsuredParcelRestOfWorld: </strong>the amount of insured parcels to rest of the world addressen  
+
+                                            </li>
+    </ul>
+
+        <p></p>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Response:</h3>
+            <p>
+                <strong>Supported accept types: </strong><br>
+                    <strong>application/pdf:</strong> <a href="https://api.intrapost.nl/documentation/order/create-daily-mail-option-3/response/application-pdf">example</a><br>
+                    <strong>application/json:</strong> <a href="https://api.intrapost.nl/documentation/order/create-daily-mail-option-3/response/application-json">example</a><br>
+                    <strong>application/xml:</strong> <a href="https://api.intrapost.nl/documentation/order/create-daily-mail-option-3/response/application-xml">example</a><br>
+            </p>
+            <p>
+                    </p><ul>
+            <li>
+                <strong>Errors: </strong>list of error messages when an error has occured, otherwise null  
+
+                                            </li>
+            <li>
+                <strong>FileName: </strong>the name the PDF file has in our systeem  
+
+                                            </li>
+            <li>
+                <strong>OrderCode: </strong>the order's code, which is unique per order  
+
+                                            </li>
+            <li>
+                <strong>Base64PdfContent: </strong>the content of the PDF in base64 encoding  
+
+                                            </li>
+    </ul>
+
+            <p></p>
+        </div>
+    </div>
+
+
+
+        <hr>
+        <footer>
+            <p>© 2026 - Intrapost B.V.</p><div class="pull-right">v17.610.604.11</div><p></p>
+        </footer>
+    </div>
+
+    <script src="./order_create-daily-mail-option-3 - Intrapost API_files/jquery"></script>
+
+    <script src="./order_create-daily-mail-option-3 - Intrapost API_files/bootstrap"></script>
+
+
+    
+
+
+
+
+
+<div id="give-freely-root-bcjindcccaagfpapjjmafapmmgkkhgoa" class="give-freely-root" data-extension-id="bcjindcccaagfpapjjmafapmmgkkhgoa" data-extension-name="JSON Formatter" style="display: block;"><template shadowrootmode="open"><style>
+  :host {
+    all: initial;
+  }
+
+  .gf-scroll-remove::-webkit-scrollbar {
+    border-radius-bottom-right: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .give-freely-close-button:hover {
+    opacity: 0.7;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1em 0;
+  }
+
+  dialog::backdrop  {
+    background-color: revert;
+  }
+
+  dialog.backdrop-hidden::backdrop  {
+    background-color: transparent;
+  }
+</style><div><div class="gf-app"></div></div></template></div></body></html>
