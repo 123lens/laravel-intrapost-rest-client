@@ -7,8 +7,8 @@ namespace Budgetlens\Intrapost\DTOs;
 class GeoLocation
 {
     public function __construct(
-        public ?float $latitude = null,
-        public ?float $longitude = null,
+        public ?string $latitude = null,
+        public ?string $longitude = null,
     ) {
     }
 
