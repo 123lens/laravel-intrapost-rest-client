@@ -41,7 +41,7 @@ class Shipment
             vzCode: $data['VZCode'] ?? null,
             parcelType: $data['ParcelType'] ?? null,
             address: isset($data['Address']) ? Address::fromArray($data['Address']) : null,
-            accountNumber: $data['AccountNumber'] ?? null,
+            accountNumber: (string) $data['AccountNumber'] ?? null,
             trackTraceLink: $data['TrackTraceLink'] ?? null,
             externalLink: $data['ExternalLink'] ?? null,
             barcode: $data['Barcode'] ?? null,
