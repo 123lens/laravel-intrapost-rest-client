@@ -1,7 +1,8 @@
 [unreleased]: https://github.com/123lens/laravel-intrapost-rest-client/compare/
 
-[1.0.0]: https://github.com/123lens/phoenix.123lens.nl/releases/tag/1.0.0
-[1.1.0]: https://github.com/123lens/phoenix.123lens.nl/releases/tag/1.1.0
+[1.0.0]: https://github.com/123lens/laravel-intrapost-rest-client/releases/tag/v1.0.0
+[1.0.1]: https://github.com/123lens/laravel-intrapost-rest-client/releases/tag/v1.0.1
+[1.1.0]: https://github.com/123lens/laravel-intrapost-rest-client/releases/tag/v1.1.0
 
 # Changelog
 
@@ -12,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0]
+
 ### Added
 - `accountNumber()` method on `Builders/PickupPointsBuilder` so pickup point lookups can be scoped to a specific Intrapost account
 
@@ -20,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rewrote the README fully in English, including the API selection guide, the Mail Piece vs. Track & Trace comparison, 
 the overview of all available calls and the typical usage flow
 
-## [1.1.0]
+## [1.0.1]
 
 ### Changes 
 - Type definitions fixes
