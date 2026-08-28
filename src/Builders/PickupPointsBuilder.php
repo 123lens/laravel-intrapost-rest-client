@@ -15,6 +15,7 @@ class PickupPointsBuilder
     private ?string $zipcode = null;
     private ?string $city = null;
     private ?string $countryCode = null;
+    private ?string $accountNumber = null;
 
     public function __construct(
         private readonly IntrapostClient $client,
@@ -59,6 +60,13 @@ class PickupPointsBuilder
     public function countryCode(string $code): static
     {
         $this->countryCode = $code;
+
+        return $this;
+    }
+
+    public function accountNumber(string $accountNumber): static
+    {
+        $this->accountNumber = $accountNumber;
 
         return $this;
     }
