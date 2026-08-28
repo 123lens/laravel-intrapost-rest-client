@@ -1,6 +1,6 @@
 # Intrapost PHP Client
 
-Fluent PHP client for the [Intrapost API](https://api.intrapost.nl) — create shipments, generate labels, track parcels, and manage daily mail orders for PostNL, DHL, and GLS.
+Fluent PHP client for the [Intrapost API](https://api.intrapost.nl): create shipments, generate labels, track parcels, and manage daily mail orders for PostNL, DHL, and GLS.
 
 ## Requirements
 
@@ -59,61 +59,61 @@ public function __construct(private IntrapostClient $client) {}
 Intrapost::mailPiece()->create()-> ...
 ```
 
-## Welke API gebruik je wanneer?
+## Which API do you use when?
 
-De Intrapost API is opgedeeld in vier resources. Hieronder staat wanneer je welke gebruikt:
+The Intrapost API is split into four resources. Below is a guide on when to use which one.
 
 ### Mail Piece vs. Track & Trace
 
-Dit is het belangrijkste onderscheid:
+This is the most important distinction:
 
 | | Mail Piece | Track & Trace |
 |---|---|---|
-| **Wat** | Brieven en ongeregistreerde poststukken | Pakketten met track & trace |
-| **Wanneer** | Reguliere post versturen (brieven, kaarten, kleine poststukken tot 2kg) | Pakketten versturen die gevolgd moeten worden |
-| **Tracking** | Geen volledige track & trace — alleen registratie en label | Volledige track & trace met VZ-code en trackinglink |
-| **Gewicht** | In grammen (1-2000g) | In kilogrammen |
-| **Producten** | Standard, FixedDays | 12 producttypen (standaard, verzekerd, aangetekend, brievenbuspakket, avondlevering, etc.) |
-| **Extra opties** | Beperkt (afmetingen, projectcode) | Uitgebreid (afmetingen, afhaalpunt, customs, handtekening, leeftijdscheck, etc.) |
+| **What** | Letters and unregistered mail items | Parcels with track & trace |
+| **When** | Sending regular mail (letters, cards, small mail items up to 2kg) | Sending parcels that need to be tracked |
+| **Tracking** | No full track & trace, only registration and a label | Full track & trace with VZ code and tracking link |
+| **Weight** | In grams (1-2000g) | In kilograms |
+| **Products** | Standard, FixedDays | 12 product types (standard, insured, registered, mailbox parcel, evening delivery, etc.) |
+| **Extra options** | Limited (dimensions, project code) | Extensive (dimensions, pickup point, customs, signature, age check, etc.) |
 
-**Vuistregel:** Verstuur je een brief of ongeregistreerd poststuk? Gebruik `mailPiece()`. Verstuur je een pakket dat gevolgd moet worden? Gebruik `trackTrace()`.
+**Rule of thumb:** sending a letter or unregistered mail item? Use `mailPiece()`. Sending a parcel that needs to be tracked? Use `trackTrace()`.
 
-### Overzicht van alle calls
+### Overview of all calls
 
-| Methode | Gebruik wanneer... |
+| Method | Use when... |
 |---|---|
 | **Mail Piece** | |
-| `mailPiece()->create()` | Je een nieuw poststuk wilt registreren en een label wilt genereren |
-| `mailPiece()->order()` | Je de dagelijkse bestelling van geregistreerde poststukken wilt ophalen (verzamelorder) |
-| `mailPiece()->getLabel()` | Je het label van een eerder aangemaakt poststuk opnieuw wilt ophalen |
+| `mailPiece()->create()` | You want to register a new mail piece and generate a label |
+| `mailPiece()->order()` | You want to retrieve the daily order of registered mail pieces (collective order) |
+| `mailPiece()->getLabel()` | You want to retrieve the label of a previously created mail piece again |
 | **Track & Trace** | |
-| `trackTrace()->create()` | Je een nieuw pakket wilt aanmelden met track & trace (de meest gebruikte call) |
-| `trackTrace()->createMailboxParcel()` | Je specifiek een brievenbuspakket wilt aanmaken met ZPL-label |
-| `trackTrace()->createLabels()` | Je labels voor meerdere zendingen in 1 bestand wilt genereren |
-| `trackTrace()->getRetourLabel()` | Je een retourlabel wilt aanmaken voor een bestaande zending |
-| `trackTrace()->cancel()` | Je een zending wilt annuleren (voordat deze is verwerkt) |
-| `trackTrace()->search()` | Je zendingen wilt zoeken op datum, postcode, referentie, etc. |
-| `trackTrace()->getFromId()` | Je zendingen wilt ophalen op basis van hun Piece ID (max. 50 per keer) |
-| `trackTrace()->getFromVz()` | Je zendingen wilt ophalen op basis van hun VZ-code (max. 50 per keer) |
+| `trackTrace()->create()` | You want to register a new parcel with track & trace (the most used call) |
+| `trackTrace()->createMailboxParcel()` | You specifically want to create a mailbox parcel with a ZPL label |
+| `trackTrace()->createLabels()` | You want to generate labels for multiple shipments in a single file |
+| `trackTrace()->getRetourLabel()` | You want to create a return label for an existing shipment |
+| `trackTrace()->cancel()` | You want to cancel a shipment (before it has been processed) |
+| `trackTrace()->search()` | You want to search shipments by date, zipcode, reference, etc. |
+| `trackTrace()->getFromId()` | You want to retrieve shipments by their Piece ID (max. 50 at a time) |
+| `trackTrace()->getFromVz()` | You want to retrieve shipments by their VZ code (max. 50 at a time) |
 | **Order (Daily Mail)** | |
-| `order()->createDailyMailOption1()` | Dagelijkse postbestelling aanmaken (optie 1) |
-| `order()->createDailyMailOption2()` | Dagelijkse postbestelling aanmaken (optie 2) |
-| `order()->createDailyMailOption3()` | Dagelijkse postbestelling aanmaken (optie 3) |
+| `order()->createDailyMailOption1()` | Create a daily mail order (option 1) |
+| `order()->createDailyMailOption2()` | Create a daily mail order (option 2) |
+| `order()->createDailyMailOption3()` | Create a daily mail order (option 3) |
 | **Utility** | |
-| `utility()->lookupAddress()` | Je een adres wilt valideren/opzoeken op basis van postcode + huisnummer |
-| `utility()->productCodes()` | Je wilt opvragen welke productcodes beschikbaar zijn voor jouw account |
-| `utility()->pickupPointsForAddress()` | Je afhaalpunten wilt zoeken bij een adres (voor `ParcelViaPickupLocation`) |
-| `utility()->dropoffPointsForInternationalAddress()` | Je inleverpunten wilt zoeken voor internationale zendingen |
+| `utility()->lookupAddress()` | You want to validate/look up an address by zipcode + house number |
+| `utility()->productCodes()` | You want to request which product codes are available for your account |
+| `utility()->pickupPointsForAddress()` | You want to search pickup points near an address (for `ParcelViaPickupLocation`) |
+| `utility()->dropoffPointsForInternationalAddress()` | You want to search drop-off points for international shipments |
 
-### Typische flow
+### Typical flow
 
 ```
-1. [Optioneel] utility()->lookupAddress()     — Valideer het afleveradres
-2. [Optioneel] utility()->pickupPointsForAddress() — Zoek afhaalpunt (als klant dat wil)
-3. trackTrace()->create() of mailPiece()->create() — Maak de zending aan, ontvang label
-4. [Optioneel] trackTrace()->search()          — Zoek/volg zendingen
-5. [Optioneel] trackTrace()->getRetourLabel()  — Genereer retourlabel indien nodig
-6. [Optioneel] trackTrace()->cancel()          — Annuleer indien nodig
+1. [Optional] utility()->lookupAddress()            : validate the delivery address
+2. [Optional] utility()->pickupPointsForAddress()   : find a pickup point (if the customer wants one)
+3. trackTrace()->create() or mailPiece()->create()  : create the shipment, receive the label
+4. [Optional] trackTrace()->search()                : search/track shipments
+5. [Optional] trackTrace()->getRetourLabel()        : generate a return label if needed
+6. [Optional] trackTrace()->cancel()                : cancel if needed
 ```
 
 ## Usage
