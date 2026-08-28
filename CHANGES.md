@@ -12,8 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `accountNumber()` method on `Builders/PickupPointsBuilder` so pickup point lookups can be scoped to a specific Intrapost account
+
 ### Changes
 - Cast accountNumber to string for `Respones/Shipment`
+- Rewrote the README fully in English, including the API selection guide, the Mail Piece vs. Track & Trace comparison, 
+the overview of all available calls and the typical usage flow
 
 ## [1.1.0]
 
